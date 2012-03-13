@@ -2,13 +2,47 @@
 <html>
 <head>
   <title>Equalpay</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/stylesheets' %>
+  <%= javascript_include_tag 'application' %>
 </head>
 <body>
+	
+	<div  class="container">
+		<div id="topspacer"></div>
+		<div id="page_container" class="span-24 last">
+			<%= render 'layouts/header' %>
+			<div id="content">
+				<div id="mainsection" class="span-16 append-1">
+				<%= yield %>	
+				</div>
+				<div id="sidebar" class="span-6 last">
+					<div id="sidebaritem">
+						<div id="sidebaritemheader">
+							<h4>Heading</h4>
+							
+						</div>
+						<div id="sidebaritemcontent">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							
+						</div>
+						
+					</div>
+				
 
-<%= yield %>
+				</div>
+
+
+
+			</div>
+			
+			<%= render 'layouts/footer'%>
+		</div>
+		
+		</div>
+		<div id="bottomspacer"></div>
+
+
 
 </body>
 </html>

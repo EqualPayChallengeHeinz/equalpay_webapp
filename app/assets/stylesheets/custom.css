@@ -1,0 +1,156 @@
+#topspacer{
+	height:25px;
+}
+
+#bottomspacer{
+	height:25px;
+}
+
+#page_container{
+	background-color: white;
+	/*border: 1px solid black;*/
+	-moz-box-shadow:2px 2px 4px #999;
+	-webkit-box-shadow:2px 2px 4px #999;
+	box-shadow:2px 2px 4px #999;
+	margin:0;
+	-moz-border-radius:    10px;
+	 -webkit-border-radius: 10px;
+	 border-radius:         10px;
+	
+}
+
+#header{
+	padding-left: 20px;
+}
+
+/*Main navigation menu */
+#mainmenu{
+	background-color: #5C604D;
+}
+#mainmenu ul {
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+#mainmenu ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0;
+}
+
+#mainmenu ul li a {
+  padding: 0.3em 0.3em;
+  font-weight: bold;
+  font: 125% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  text-decoration: none;
+  color:white !important;
+ -webkit-text:white;
+
+}
+
+
+#mainmenu ul li a:hover {
+  background-color: #F20056;
+  
+}
+
+#mainmenu ul li a:visited {
+  background-color: #F20056;
+  
+}
+
+
+
+/*End main menu*/
+
+#content{
+	/*border-top: 1px solid black;*/
+
+}
+
+#mainsection {
+	padding: 20px 20px 20px 20px;
+	
+	
+}
+
+#sidebar{
+	padding: 20px 20px 20px 20px;
+
+}
+
+body{
+	background-color:#eef2fb; 
+	
+}
+
+/* Vertical Navigation menu styling #eef2fb;*/
+
+#verticalnavbar{
+	background-color: #DCDCDC;
+	border: 1px solid #999;
+	-moz-border-radius:    4px;
+	 -webkit-border-radius: 4px;
+	 border-radius:         4px;
+	
+}
+#verticalnavbar ul{
+	  
+	  padding: 0.5em;
+			
+}
+
+#verticalnavbar ul li {
+  list-style: none;
+  padding: 0.5em 0;
+  
+}
+
+#verticalnavbar ul li a {
+  padding: 0.3em 0.3em;
+  font-weight: bold;
+  font: 110% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  text-decoration: none;
+  color:white !important;
+ 
+
+}
+
+#verticalnavbar ul li a:hover {
+  background-color: #00BFFF;
+  
+}
+
+#verticalnavbar ul li a:visited {
+  background-color: #00BFFF;
+  
+}
+
+
+#sidebaritem{
+	border:1px solid gray;
+	-moz-border-radius:    7px ;
+	 -webkit-border-radius: 7px;
+	 border-radius:         7px;
+	padding:10px 10px 10px 10px;
+	
+}
+#sidebaritemheader{
+	background-color: #B22222;
+	color:#FFFFF !important;
+	text-decoration:none;
+	border:1px solid gray;
+	-moz-border-radius:    7px 7px 0 0;
+	 -webkit-border-radius: 7px 7px 0 0;
+	 border-radius:         7px 7px 0 0;
+}
+
+#footer{
+	background-color: #F5F5F5;
+	-moz-border-radius:    0 0 10px 10px;
+	 -webkit-border-radius: 0 0 10px 10px;
+	 border-radius:         0 0 10px 10px;
+	padding:20px 20px 20px 20px;
+	margin:0;
+	
+}

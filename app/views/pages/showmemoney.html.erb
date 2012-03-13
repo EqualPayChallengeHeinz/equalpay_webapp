@@ -1,0 +1,42 @@
+<%= javascript_include_tag 'showmemoney' %>
+<div id="verticalnavbar" class="span-3">
+<ul>
+	<li><a id="occup_link" href="#">Occupation</a> </li>
+	<li><a id="loc_link" href="#">Location</a> </li>
+	<li><a id="gend_link" href="#">Gender</a> </li>
+	<li><a id="paychk_link" href="#">Paycheck</a> </li>
+</ul>
+	
+</div>
+<div id="userform" class="span-10">
+	<div id="occupation">
+		Select Occupation <br/>
+		<select name="Occupation" id="OccupationList">
+			<option value="option1">Software Engineer</option>
+			<option value="option2">Technical Writer</option>
+		</select>
+		
+	</div>
+	<div id="location">
+		<label for="zipcode">Start typing zipcode</label> <br/>
+		<input type="text" name="" value="" id="zipcode">
+		
+		
+	</div>
+	
+	
+	<div id="gender">
+		<h5>Select gender</h5>
+		<input type="radio" name="gender_radio" value="Male"> Male<br/>
+		<input type="radio" name="gender_radio" value="Femal">Female
+	</div>
+	
+	<div id="paycheck">
+		<h5>Select Paycheck type</h5>
+		<input type="radio" name="paychk_radio" value="Yearly"> Yearly Salary<br/>
+		<input type="radio" name="paychk_radio" value="Monthly"> Monthly Salary <br/>
+		<input type="radio" name="paychk_radio" value="Hourly"> Hourly Wages <br/>
+	</div>
+
+	
+</div>
