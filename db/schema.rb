@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+# encoding: UTF-8
+>>>>>>> 8c7d86a2de870392f1a0ebbd338a82c470e8b13d
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,6 +14,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20120314034539) do
 
   create_table "salary_com_jobs", :force => true do |t|
@@ -17,6 +22,22 @@ ActiveRecord::Schema.define(:version => 20120314034539) do
     t.string   "code"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+=======
+ActiveRecord::Schema.define(:version => 20120313230519) do
+
+  create_table "blsjobs", :force => true do |t|
+    t.string  "bls_job_code"
+    t.string  "occupation1"
+    t.string  "occupation2"
+    t.string  "occupation3"
+    t.string  "occupation4"
+    t.integer "workers_all"
+    t.integer "earnings_all"
+    t.integer "workers_men"
+    t.integer "earnings_men"
+    t.integer "workers_women"
+    t.integer "earnings_women"
+>>>>>>> 8c7d86a2de870392f1a0ebbd338a82c470e8b13d
   end
 
 end
