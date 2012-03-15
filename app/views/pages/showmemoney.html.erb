@@ -8,13 +8,18 @@
 </ul>
 	
 </div>
+
 <div id="userform" class="span-10">
 	<div id="occupation">
-		Select Occupation <br/>
-		<select name="Occupation" id="OccupationList">
-			<option value="option1">Software Engineer</option>
-			<option value="option2">Technical Writer</option>
-		</select>
+
+		
+		
+
+	<%= form_tag("/SalaryComJobs", :method => "get") do %>
+  		<%= label_tag(:q, "Start typing your job title") %> <br/>
+  		<%= text_field_tag :jobtitle, '', :size => 50   %>
+  		
+	<% end %>
 	
 		
 		<a id="nextlink1" href="#" class="button orange">Next</a>
@@ -24,7 +29,7 @@
 	
 	<div id="location">
 		<label for="zipcode">Start typing zipcode</label> <br/>
-		<input type="text" name="" value="" id="zipcode">
+		<input type="text" name="" value="" id="zipcode" class="userfield">
 		
 		<a id="nextlink2" href="#" class="button orange">Next</a>
 	</div>
@@ -32,9 +37,12 @@
 	
 	<div id="gender">
 		<h5>Select gender</h5>
+
+		
 		<input type="radio" name="gender_radio" value="Male"> Male<br/>
-		<input type="radio" name="gender_radio" value="Femal">Female
+		<input type="radio" name="gender_radio" value="Female">Female
 		<a id="nextlink3" href="#" class="button orange">Next</a>
+
 	</div>
 	
 	<div id="paycheck">
@@ -47,3 +55,4 @@
 
 	
 </div>
+

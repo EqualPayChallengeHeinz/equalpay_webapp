@@ -28,6 +28,11 @@ $ ->
 	$('#gend_link').hover ->
 		initCurrentMenuItem('#gend_link')
 		$('#gender').show()
+
+	$('#gend_link').hover ->
+		initCurrentMenuItem('#gend_link')
+		$('#gender').show()
+
 		
 	$('#paychk_link').click ->
 		initCurrentMenuItem('#paychk_link')
@@ -42,8 +47,8 @@ $ ->
 		$('#gend_link').trigger('click')
 	$('#nextlink3').click ->
 		$('#paychk_link').trigger('click')
-	$('#salarycomjob_title').autocomplete
-		source: $('#salarycomjob_title').data('autocomplete-source')
+	$('#jobtitle').autocomplete
+		source: '/SalaryComJobs'
 	
 	
 	
