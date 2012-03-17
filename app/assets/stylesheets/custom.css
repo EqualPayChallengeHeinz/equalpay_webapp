@@ -118,6 +118,7 @@ body{
   font: 110% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
   text-decoration: none;
   color:white !important;
+  display:block;
  
 
 }
@@ -244,3 +245,7 @@ ul.ui-autocomplete li {
    ul.ui-autocomplete li a.ui-state-hover, a.ui-state-active {
       background-color: #FFFCB2;
     }
+
+.searchbox{
+	height:2em;
+}

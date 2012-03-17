@@ -17,7 +17,7 @@
 
 	<%= form_tag("/SalaryComJobs", :method => "get") do %>
   		<%= label_tag(:q, "Start typing your job title") %> <br/>
-  		<%= text_field_tag :jobtitle, '', :size => 50   %>
+  		<%= text_field_tag :jobtitle, '', :size => 50,  :class => 'searchbox'  %>
   		
 	<% end %>
 	
