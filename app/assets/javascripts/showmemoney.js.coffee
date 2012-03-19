@@ -1,6 +1,7 @@
 currentQuestionIndex = 0
 questionList = ["occupation", "gender", "location", "paycheck"]
-
+@testBarChart
+@testPieChart
  
 
 
@@ -47,8 +48,39 @@ $ ->
 		$('#gend_link').trigger('click')
 	$('#nextlink3').click ->
 		$('#paychk_link').trigger('click')
+		
 	$('#jobtitle').autocomplete
 		source: '/SalaryComJobs'
+		
+	$('#showmemoney').click ->
+		$('#userform > div').hide()
+		$('#chartscontainer').show()
+		
+	
+	testBarChart =  new Highcharts.Chart {
+	         chart: 
+	            renderTo: 'chartscontainer',
+	            type: 'bar'
+	         
+	         title: 
+	            text: 'Wage Gap'
+	         
+	         xAxis:
+	            categories: ['Wages']
+	         
+	         yAxis:
+	            title: 
+	               text: 'Average Annual Earnings'   
+	         
+	         series: [{name: 'Men', data: [100]}, {name: 'Women', data: [80]}]
+		}
+	
+	
+		
+	
+		
+	
+	      
 	
 	
 	
