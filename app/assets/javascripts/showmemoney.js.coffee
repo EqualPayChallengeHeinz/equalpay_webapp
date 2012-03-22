@@ -1,7 +1,7 @@
 currentQuestionIndex = 0
 questionList = ["occupation", "gender", "location", "paycheck"]
 @testBarChart
-@testPieChart
+@testAreaChart
  
 
 
@@ -55,6 +55,7 @@ $ ->
 	$('#showmemoney').click ->
 		$('#userform > div').hide()
 		$('#chartscontainer').show()
+		$('#chartscontainer2').show()
 		
 	
 	testBarChart =  new Highcharts.Chart {
@@ -64,16 +65,51 @@ $ ->
 	         
 	         title: 
 	            text: 'Wage Gap'
+	
+	         subtitle:
+	            text: 'Source Salary.com, Bureau of Labor Statistics'
 	         
 	         xAxis:
 	            categories: ['Wages']
 	         
 	         yAxis:
 	            title: 
-	               text: 'Average Annual Earnings'   
+	               text: 'Average Annual Earnings' 
+	            labels:
+	               formatter: ->
+	                     return "$" + this.value + "K"
 	         
-	         series: [{name: 'Men', data: [100]}, {name: 'Women', data: [80]}]
-		}
+	         series:[{name: 'Men', data:[$('#mydatadiv').data('chartdata').Men] },
+	             {name:'Women', data:[$('#mydatadiv').data('chartdata').Women]}]
+		    }
+		
+			testAreaChart =  new Highcharts.Chart {
+			         chart: 
+			            renderTo: 'chartscontainer2',
+			            type: 'areaspline'
+
+			         title: 
+			            text: 'Wage Gap Trend'
+
+			         subtitle:
+			            text: 'Source Salary.com, Bureau of Labor Statistics'
+
+			         xAxis:
+			            categories: [2012, 2022, 2032, 2042, 2052]
+
+			         yAxis:
+			            title: 
+			               text: 'Average Annual Earnings' 
+			            labels:
+			               formatter: ->
+			                     return "$" + this.value + "K"  
+			         plotOptions:
+			            areaspline:
+			               fillOpacity: 0.5
+			         series:[{name: 'Men', data:[100,150, 190, 200, 250] },
+			             {name:'Women', data:[80, 120, 140, 155, 175]}]
+
+				    }
 	
 	
 		
