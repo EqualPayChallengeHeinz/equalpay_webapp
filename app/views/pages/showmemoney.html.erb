@@ -15,9 +15,10 @@
 		
 		
 
-	<%= form_tag("/SalaryComJobs", :method => "get") do %>
+	<%= form_tag("/charts", :method => "get") do %>
   		<%= label_tag(:q, "Start typing your job title") %> <br/>
   		<%= text_field_tag :jobtitle, '', :size => 50,  :class => 'searchbox'  %>
+        <%= submit_tag "Search"%>
   		
 	<% end %>
 	
@@ -53,11 +54,14 @@
 	    <a id="showmemoney" href="#" class="button orange">Show me the money</a>
 	</div>
 	
+	<%= content_tag "div", id:"mydatadiv", data: {chartdata:  chart_wagegap}   do %>
+	<% end %>
 	<div id="chartscontainer" class="span-10 last">
-		whats going on?
+		
 	</div>
+	
 	<div id="chartscontainer2" class="span-10 last">
-		whats going on?
+		
 	</div>
 	
 	
