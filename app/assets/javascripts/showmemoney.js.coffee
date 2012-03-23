@@ -49,13 +49,18 @@ $ ->
 	$('#nextlink3').click ->
 		$('#paychk_link').trigger('click')
 		
-	$('#jobtitle').autocomplete
+	$('#salarycomjob_jobtitle').autocomplete
 		source: '/SalaryComJobs'
+		select: (event, ui) ->
+			this.value = ui.item.label
+			$('#jobcode').val(ui.item.value)
+			return false
+	
 		
 	$('#showmemoney').click ->
 		$('#userform > div').hide()
 		$('#chartscontainer').show()
-		$('#chartscontainer2').show()
+		$('#chartscontainer2').show()	
 		
 	
 	testBarChart =  new Highcharts.Chart {
@@ -82,35 +87,35 @@ $ ->
 	         series:[{name: 'Men', data:[$('#mydatadiv').data('chartdata').Men] },
 	             {name:'Women', data:[$('#mydatadiv').data('chartdata').Women]}]
 		    }
-		
-			testAreaChart =  new Highcharts.Chart {
-			         chart: 
-			            renderTo: 'chartscontainer2',
-			            type: 'areaspline'
-
-			         title: 
-			            text: 'Wage Gap Trend'
-
-			         subtitle:
-			            text: 'Source Salary.com, Bureau of Labor Statistics'
-
-			         xAxis:
-			            categories: [2012, 2022, 2032, 2042, 2052]
-
-			         yAxis:
-			            title: 
-			               text: 'Average Annual Earnings' 
-			            labels:
-			               formatter: ->
-			                     return "$" + this.value + "K"  
-			         plotOptions:
-			            areaspline:
-			               fillOpacity: 0.5
-			         series:[{name: 'Men', data:[100,150, 190, 200, 250] },
-			             {name:'Women', data:[80, 120, 140, 155, 175]}]
-
-				    }
 	
+	testAreaChart =  new Highcharts.Chart {
+	         chart: 
+	            renderTo: 'chartscontainer2',
+	            type: 'areaspline'
+
+	         title: 
+	            text: 'Wage Gap Trend'
+
+	         subtitle:
+	            text: 'Source Salary.com, Bureau of Labor Statistics'
+
+	         xAxis:
+	            categories: [0,5, 10, 15, 20, 25]
+
+	         yAxis:
+	            title: 
+	               text: 'Average Annual Earnings' 
+	            labels:
+	               formatter: ->
+	                     return "$" + this.value + "K"  
+	         plotOptions:
+	            areaspline:
+	               fillOpacity: 0.5
+	         series:[{name: 'Men', data:[120, 138.4388936299378, 159.71106057901034, 184.25185439185137, 212.56352392726922, 245.22549232143305] },
+	             {name:'Women', data:[100, 115.36574469161485, 133.0925504825086, 153.5432119932095, 177.136269939391, 204.35457693452753]}]
+
+		    }
+		
 	
 		
 	

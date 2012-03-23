@@ -57,8 +57,9 @@ Equalpay::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
   root :to => "pages#home"
   resources :SalaryComJobs
+  
   match '/showmemoney'  => "pages#showmemoney"
-  match '/charts' => 'charts#index'
+  match '/charts' => 'charts#getwagedata'
   
   
 end

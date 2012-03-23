@@ -15,12 +15,12 @@
 		
 		
 
-	<%= form_tag("/charts", :method => "get") do %>
+<%= form_tag("/showmemoney", :method => "get") do %>
   		<%= label_tag(:q, "Start typing your job title") %> <br/>
-  		<%= text_field_tag :jobtitle, '', :size => 50,  :class => 'searchbox'  %>
-        <%= submit_tag "Search"%>
-  		
-	<% end %>
+  		<%= text_field :salarycomjob, :jobtitle, :size => 50,  :class => 'searchbox'  %>
+  		<%= hidden_field_tag :jobcode %>
+          		
+	
 	
 		
 		<a id="nextlink1" href="#" class="button orange">Next</a>
@@ -51,19 +51,32 @@
 		<input type="radio" name="paychk_radio" value="Yearly"> Yearly Salary<br/>
 		<input type="radio" name="paychk_radio" value="Monthly"> Monthly Salary <br/>
 		<input type="radio" name="paychk_radio" value="Hourly"> Hourly Wages <br/>
-	    <a id="showmemoney" href="#" class="button orange">Show me the money</a>
+	    <%= submit_tag("Show me the money", :id => "showmemoney", :class => "button orange") %>
+		<% end %>
+
 	</div>
 	
-	<%= content_tag "div", id:"mydatadiv", data: {chartdata:  chart_wagegap}   do %>
+	<%= content_tag "div", id:"mydatadiv", data: {chartdata: @highchartdata }   do %>
 	<% end %>
-	<div id="chartscontainer" class="span-10 last">
-		
-	</div>
+
 	
-	<div id="chartscontainer2" class="span-10 last">
-		
-	</div>
-	
+
 	
 </div>
+
+
+
+<div id="chartscontainer" class="span-16 last">
+		
+	</div>
+	
+	<div id="chartscontainer2" class="span-16 last">
+		
+	</div>
+<div class="span-24 last">
+<%= debug params %>
+<%= debug @highchartdata %>
+</div>
+
+
 
