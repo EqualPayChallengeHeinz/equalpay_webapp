@@ -100,7 +100,7 @@ $ ->
 	            text: 'Source Salary.com, Bureau of Labor Statistics'
 
 	         xAxis:
-	            categories: [0,5, 10, 15, 20, 25]
+	            categories: [0,5, 10, 15, 20, 25, 30]
 
 	         yAxis:
 	            title: 
@@ -111,8 +111,8 @@ $ ->
 	         plotOptions:
 	            areaspline:
 	               fillOpacity: 0.5
-	         series:[{name: 'Men', data:[120, 138.4388936299378, 159.71106057901034, 184.25185439185137, 212.56352392726922, 245.22549232143305] },
-	             {name:'Women', data:[100, 115.36574469161485, 133.0925504825086, 153.5432119932095, 177.136269939391, 204.35457693452753]}]
+	         series:[{name: 'Men', data:$('#mydatadiv').data('wagegaptrend').Men },
+	             {name:'Women', data:$('#mydatadiv').data('wagegaptrend').Women}]
 
 		    }
 		

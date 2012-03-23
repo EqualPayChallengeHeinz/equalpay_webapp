@@ -35,8 +35,11 @@ class PagesController < ApplicationController
 			wm = sc_w.to_f / (pf * g + 1 - pf).to_f
 			wf   = g.to_f * wm.to_f
 
+			years = [0,5,10,15,20,25,30]
+			inflation = 0.08
+
 			@highchartdata = {:Men => wm, :Women => wf }
-	  		
+	  		@wagegaptrend = {:Men => years.map {|y| wm*(1 + inflation)**y}, :Women => years.map {|y| wf*(1 + inflation)**y} }
 	  	end
 	  	
 
