@@ -1,0 +1,29 @@
+<h1>Listing zips</h1>
+
+<table>
+  <tr>
+    <th>Zipcode</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Locationtext</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @zips.each do |zip| %>
+  <tr>
+    <td><%= zip.zipcode %></td>
+    <td><%= zip.city %></td>
+    <td><%= zip.state %></td>
+    <td><%= zip.locationtext %></td>
+    <td><%= link_to 'Show', zip %></td>
+    <td><%= link_to 'Edit', edit_zip_path(zip) %></td>
+    <td><%= link_to 'Destroy', zip, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Zip', new_zip_path %>

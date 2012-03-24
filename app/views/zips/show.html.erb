@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Zipcode:</b>
+  <%= @zip.zipcode %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @zip.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @zip.state %>
+</p>
+
+<p>
+  <b>Locationtext:</b>
+  <%= @zip.locationtext %>
+</p>
+
+
+<%= link_to 'Edit', edit_zip_path(@zip) %> |
+<%= link_to 'Back', zips_path %>

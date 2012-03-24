@@ -15,12 +15,14 @@
 		
 		
 
-	<%= form_tag("/charts", :method => "get") do %>
+
+<%= form_tag("/showmemoney", :method => "get") do %>
   		<%= label_tag(:q, "Start typing your job title") %> <br/>
-  		<%= text_field_tag :jobtitle, '', :size => 50,  :class => 'searchbox'  %>
-        <%= submit_tag "Search"%>
-  		
-	<% end %>
+  		<%= text_field :salarycomjob, :jobtitle, :size => 50,  :class => 'searchbox'  %>
+  		<%= hidden_field_tag :jobcode %>
+          		
+	
+
 	
 		
 		<a id="nextlink1" href="#" class="button orange">Next</a>
@@ -29,8 +31,8 @@
 	
 	
 	<div id="location">
-		<label for="zipcode">Start typing zipcode</label> <br/>
-		<input type="text" name="" value="" id="zipcode" class="userfield">
+		<label for="zipcode">Start typing city or zipcode</label> <br/>
+		<input type="text" name="" value="" id="zipcodefield" size="50"class="searchbox">
 		
 		<a id="nextlink2" href="#" class="button orange">Next</a>
 	</div>
@@ -48,24 +50,36 @@
 	
 	<div id="paycheck">
 		<h5>Select Paycheck type</h5>
-		<input type="radio" name="paychk_radio" value="Yearly"> Yearly Salary<br/>
-		<input type="radio" name="paychk_radio" value="Monthly"> Monthly Salary <br/>
-		<input type="radio" name="paychk_radio" value="Hourly"> Hourly Wages <br/>
-	    <a id="showmemoney" href="#" class="button orange">Show me the money</a>
+		<input type="radio" name="paychk_radio" value="52.177"> Yearly Salary<br/>
+		<input type="radio" name="paychk_radio" value="4.348"> Monthly Salary <br/>
+		<input type="radio" name="paychk_radio" value="0.025"> Hourly Wages <br/>
+	    <%= submit_tag("Show me the money", :id => "showmemoney", :class => "button orange") %>
+		<% end %>
+
 	</div>
 	
-	<%= content_tag "div", id:"mydatadiv", data: {chartdata:  chart_wagegap}   do %>
+	<%= content_tag "div", id:"mydatadiv", data: {chartdata: @highchartdata, wagegaptrend: @wagegaptrend }   do %>
 	<% end %>
-	<div id="chartscontainer" class="span-14 ">
-		
-	</div>
+
+
 	
-	<br/><br/>
-	
-	<div id="chartscontainer2" class="span-14 ">
-		
-	</div>
-	
+
 	
 </div>
+
+
+
+<div id="chartscontainer" class="span-16 last">
+		
+	</div>
+	
+	<div id="chartscontainer2" class="span-16 last">
+		
+	</div>
+<div class="span-24 last">
+<%= debug params %>
+<%= debug @highchartdata %>
+</div>
+
+
 
